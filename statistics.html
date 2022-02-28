@@ -40,11 +40,21 @@
     </header>
     <!--Blurb1-->
     <main class="container-fluid ">
-        <a class="graph" href="https://www.statista.com/statistics/1087466/covid19-cases-recoveries-deaths-worldwide/"
+
+        <div id="tracker-box">
+            <div id="myButton">
+                <button class="btn btn-dark" type="submit" id="country">Get Global Statistics</button>
+            </div>
+            <div id="confirmed"></div>
+            <div id="recovered"></div>
+            <div id="deaths"></div>
+        </div>
+
+        <!-- <a class="graph" href="https://www.statista.com/statistics/1087466/covid19-cases-recoveries-deaths-worldwide/"
             rel="nofollow"><img
                 src="https://www.statista.com/graphic/1/1087466/covid19-cases-recoveries-deaths-worldwide.jpg"
                 alt="Statistic: Number of coronavirus (COVID-19) cases, recoveries, and deaths worldwide as of January 27, 2022 | Statista"
-                style="width: 100%; height: auto !important; text-align: center;margin-top: 10%;max-width:800px;-ms-interpolation-mode: bicubic;" /></a>
+                style="width: 100%; height: auto !important; text-align: center;margin-top: 10%;max-width:800px;-ms-interpolation-mode: bicubic;" /></a> -->
         <div class="container box-1">
             <div class="row ">
                 <div class="col-12 col-md-6">
@@ -53,7 +63,8 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <h2 class="text-center animate__animated animate__fadeIn bold .summary">Origins and Timeline</h2>
-                    <p class = "text-center">Towards the end of 2019, Chinese officials identified an unknown disease called coronavirus. The
+                    <p class="text-center">Towards the end of 2019, Chinese officials identified an unknown disease
+                        called coronavirus. The
                         first death in America occurred in California. It wasn't until March 11, 2020 when the World
                         Health Organization declared the outbreak a pandemic.</p>
                 </div>
@@ -65,11 +76,14 @@
                 <div class="col-12 col-md-6">
                     <img class="img-fluid"
                         src="https://images.ctfassets.net/ut7rzv8yehpf/73WgoxQOoRiad2WdFxre0e/3b8db0b360f2959b43ba4261e8b7a33b/covid-stats-post-image6.png?w=930"></img>
-                        
+
                 </div>
                 <div class="col-12 col-md-6">
                     <h2 class="text-center animate__animated animate__fadeIn bold">Fatality Rates by Ages</h2>
-                    <p class = "text-center">Younger people have a much lower fatality rate than those who are older, 40+. This data consists of 2,449 U.S. COVID-19 cases from February 12, 2020, through March 16, 2020. Compared with 18 to 29-year-olds, the rate of death is four times higher in 30 to 39-year-olds, and 340 times higher in those who are 85 years and older.</p>
+                    <p class="text-center">Younger people have a much lower fatality rate than those who are older, 40+.
+                        This data consists of 2,449 U.S. COVID-19 cases from February 12, 2020, through March 16, 2020.
+                        Compared with 18 to 29-year-olds, the rate of death is four times higher in 30 to 39-year-olds,
+                        and 340 times higher in those who are 85 years and older.</p>
                 </div>
             </div>
         </div>
@@ -78,11 +92,15 @@
             <div class="row">
                 <div class="col-12 col-md-6">
                     <img class="img-fluid"
-                    src="https://images.ctfassets.net/ut7rzv8yehpf/3JoDpMUPkYgcFj8lyW1sQJ/104f5518fad9669d04ecc3c5b8cb3d95/covid-stats-post-image3.png?w=930"></img>
+                        src="https://images.ctfassets.net/ut7rzv8yehpf/3JoDpMUPkYgcFj8lyW1sQJ/104f5518fad9669d04ecc3c5b8cb3d95/covid-stats-post-image3.png?w=930"></img>
                 </div>
                 <div class="col-12 col-md-6">
                     <h2 class="text-center animate__animated animate__fadeIn bold">Common Symptoms</h2>
-                    <p class = "text-center">Signs and symptoms of the coronavirus may appear 2 to 14 days after exposure. This time after exposure and before having symptoms is called the incubation period. You can still spread COVID-19 before you have symptoms (presymptomatic transmission). Common signs and symptoms can include: a fever, dry coughs, fatigue, producing thick mucus, and shortness of breath.</p>
+                    <p class="text-center">Signs and symptoms of the coronavirus may appear 2 to 14 days after exposure.
+                        This time after exposure and before having symptoms is called the incubation period. You can
+                        still spread COVID-19 before you have symptoms (presymptomatic transmission). Common signs and
+                        symptoms can include: a fever, dry coughs, fatigue, producing thick mucus, and shortness of
+                        breath.</p>
                 </div>
             </div>
         </div>
@@ -125,7 +143,10 @@
         </button>
     </div>
     <div class="container mx-auto video mt-5">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/sIll97Rufc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/sIll97Rufc0" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
     </div>
     <footer class="container-fluid bg-dark mt-5 footer pt-5">
         <div class="row">
@@ -145,6 +166,36 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script>
+        const myButton = document.getElementById('country')
+        myButton.addEventListener('click', (e) => {
+            e.preventDefault()
+            let country = document.getElementById('country').value
+            // let url = `https://api.covid19api.com/countries`
+            let url = 'https://api.covid19api.com/summary'
+
+            fetch(url)
+                .then(res => res.json())
+                .then(data => {
+
+                    // let length = data.Countries.length
+                    // let index = length - 2
+
+                    let confirmed = document.getElementById('confirmed')
+                    // let recovered = document.getElementById('recovered')
+                    let deaths = document.getElementById('deaths')
+
+                    confirmed.innerHTML = ''
+                    // recovered.innerHTML = ''
+                    deaths.innerHTML = ''
+
+                    // confirmed.append("Total Confirmed Cases:" + data[index].Confirmed)
+                    confirmed.append("Total Confirmed Cases: " + data.Global.TotalConfirmed)
+                    // recovered.append("Total Recovered Cases:" + data.Global.TotalConfirmed)
+                    deaths.append("Total Deaths: " + data.Global.TotalDeaths)
+                })
+        })
+    </script>
 </body>
 
 </html>
