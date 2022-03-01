@@ -119,6 +119,9 @@ main {
     main {
       padding-top: 10%;
     }
+    p {
+      font-size: 20px;
+    }
   }
   
   @media only screen and (min-width: 1400px) {
@@ -127,6 +130,9 @@ main {
     }
     main .col-12 h2 {
       line-height: 1.5;
+    }
+    p {
+      font-size: 20px;
     }
   }
   
@@ -147,7 +153,9 @@ main {
     .facts {
       margin-top: 5%;
     }
-  
+    p {
+      font-size: 20px;
+    }
   }
   
   

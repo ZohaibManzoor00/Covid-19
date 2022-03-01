@@ -155,6 +155,9 @@ footer a {
   #last-box {
     padding-bottom: 125px;
   }
+  p {
+    font-size: 20px;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
@@ -163,6 +166,9 @@ footer a {
   }
   main .col-12 h2 {
     line-height: 1.5;
+  }
+  p {
+    font-size: 20px;
   }
 }
 
@@ -182,5 +188,8 @@ footer a {
   }
   .facts {
     margin-top: 5%;
+  }
+  p {
+    font-size: 20px;
   }
 }

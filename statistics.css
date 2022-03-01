@@ -160,6 +160,9 @@ main {
       padding-top: 43px;
       /* margin-bottom: -1000px; */
     }
+    p {
+      font-size: 20px;
+    }
   }
   
   @media only screen and (min-width: 1400px) {
@@ -168,6 +171,9 @@ main {
     }
     main .col-12 h2 {
       line-height: 1.5;
+    }
+    p {
+      font-size: 20px;
     }
   }
   
@@ -189,9 +195,18 @@ main {
       margin-top: 5%;
     }
     #myButton {
-      padding-top: 43px;
-      padding-bottom: 10px;
+      padding-top: 60px;
+      padding-bottom: 30px;
       /* margin-bottom: -1000px; */
+    }
+    p {
+      font-size: 20px;
+    }
+    #confirmed {
+      margin-top: -20px;
+    }
+    #deaths {
+      margin-bottom: -50px;
     }
   }
   
