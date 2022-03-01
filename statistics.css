@@ -2,6 +2,10 @@ main {
     padding-top: 35%;
   }
 
+  /* #country {
+    background-color: #6b5fdb;
+  } */
+
   #myButton {
     display: flex;
     justify-content: center;
