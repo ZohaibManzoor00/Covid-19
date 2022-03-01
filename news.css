@@ -96,6 +96,9 @@ main {
     main .col-12 h2 {
       line-height: 1.2;
     }
+    #blurb-one {
+      margin-top: -24px !important;
+    }
   }
   
   @media only screen and (min-width: 1200px) {
@@ -104,6 +107,9 @@ main {
     }
     p {
       font-size: 20px;
+    }
+    #blurb-one {
+      margin-top: 0px !important;
     }
   }
   
@@ -119,9 +125,6 @@ main {
     }
     .box-1 {
       padding-top: 110px;
-    }
-    #blurb-one {
-      margin-top: -20px !important;
     }
   }
   
@@ -143,7 +146,7 @@ main {
       font-size: 20px;
     }
     #blurb-one {
-      padding-top: 30px !important;
+      padding-top: 60px !important;
     }
   }
   
