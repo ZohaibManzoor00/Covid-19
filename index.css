@@ -163,6 +163,9 @@ footer a {
   p {
     font-size: 20px;
   }
+  #firstBlurb {
+    margin-top: -100px;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
@@ -174,8 +177,10 @@ footer a {
   }
   p {
     font-size: 20px;
+  }  
+  #firstBlurb {
+    padding-top: 230px;
   }
-
 }
 
 @media only screen and (min-width: 1800px) {
@@ -199,6 +204,6 @@ footer a {
     font-size: 20px;
   }
   #firstBlurb {
-    padding-top: 170px;
+    padding-top: 230px;
   }
 }
