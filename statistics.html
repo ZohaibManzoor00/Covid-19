@@ -41,21 +41,21 @@
     <!--Blurb1-->
     <main class="container-fluid ">
 
-        <div id="tracker-box">
+        <!-- <div id="tracker-box">
             <div id="myButton">
                 <button class="btn btn-dark" type="submit" id="country">Get Global Statistics</button>
             </div>
             <div id="confirmed"></div>
             <div id="recovered"></div>
             <div id="deaths"></div>
-        </div>
+        </div> -->
 
         <!-- <a class="graph" href="https://www.statista.com/statistics/1087466/covid19-cases-recoveries-deaths-worldwide/"
             rel="nofollow"><img
                 src="https://www.statista.com/graphic/1/1087466/covid19-cases-recoveries-deaths-worldwide.jpg"
                 alt="Statistic: Number of coronavirus (COVID-19) cases, recoveries, and deaths worldwide as of January 27, 2022 | Statista"
                 style="width: 100%; height: auto !important; text-align: center;margin-top: 10%;max-width:800px;-ms-interpolation-mode: bicubic;" /></a> -->
-        <div class="container box-1">
+        <div class="container box-1" id="firstBlurb">
             <div class="row ">
                 <div class="col-12 col-md-6">
                     <img class="img-fluid"
@@ -166,34 +166,34 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script>
-        const myButton = document.getElementById('country')
-        myButton.addEventListener('click', (e) => {
-            e.preventDefault()
-            let country = document.getElementById('country').value
-            // let url = `https://api.covid19api.com/countries`
-            let url = 'https://api.covid19api.com/summary'
+        // const myButton = document.getElementById('country')
+        // myButton.addEventListener('click', (e) => {
+        //     e.preventDefault()
+        //     let country = document.getElementById('country').value
+        //     // let url = `https://api.covid19api.com/countries`
+        //     let url = 'https://api.covid19api.com/summary'
 
-            fetch(url)
-                .then(res => res.json())
-                .then(data => {
+        //     fetch(url)
+        //         .then(res => res.json())
+        //         .then(data => {
 
-                    // let length = data.Countries.length
-                    // let index = length - 2
+        //             // let length = data.Countries.length
+        //             // let index = length - 2
 
-                    let confirmed = document.getElementById('confirmed')
-                    // let recovered = document.getElementById('recovered')
-                    let deaths = document.getElementById('deaths')
+        //             let confirmed = document.getElementById('confirmed')
+        //             // let recovered = document.getElementById('recovered')
+        //             let deaths = document.getElementById('deaths')
 
-                    confirmed.innerHTML = ''
-                    // recovered.innerHTML = ''
-                    deaths.innerHTML = ''
+        //             confirmed.innerHTML = ''
+        //             // recovered.innerHTML = ''
+        //             deaths.innerHTML = ''
 
-                    // confirmed.append("Total Confirmed Cases:" + data[index].Confirmed)
-                    confirmed.append("Total Confirmed Cases: " + data.Global.TotalConfirmed)
-                    // recovered.append("Total Recovered Cases:" + data.Global.TotalConfirmed)
-                    deaths.append("Total Deaths: " + data.Global.TotalDeaths)
-                })
-        })
+        //             // confirmed.append("Total Confirmed Cases:" + data[index].Confirmed)
+        //             confirmed.append("Total Confirmed Cases: " + data.Global.TotalConfirmed)
+        //             // recovered.append("Total Recovered Cases:" + data.Global.TotalConfirmed)
+        //             deaths.append("Total Deaths: " + data.Global.TotalDeaths)
+        //         })
+        // })
     </script>
 </body>
 
