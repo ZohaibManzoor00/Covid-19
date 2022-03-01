@@ -112,6 +112,9 @@ footer a {
   #last-box {
     margin-bottom: -50px !important;
   }
+  #firstBlurb {
+    padding-top: 140px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -124,6 +127,9 @@ footer a {
   .box-1 img {
     height: 100%;
   }
+  /* .box-1 {
+    padding-top: 200px;
+  } */
   .video {
     height: 350px;
   }
@@ -139,12 +145,11 @@ footer a {
   main .col-12 h2 {
     line-height: 1.2;
   }
-  #myButton {
-    padding-top: 10px;
-    padding-bottom: 5px;
+  #firstBlurb {
+    margin-top: -40px;
   }
   #last-box {
-    padding-bottom: 90px;
+    margin-bottom: 30px !important;
   }
 }
 
@@ -162,7 +167,7 @@ footer a {
 
 @media only screen and (min-width: 1400px) {
   main {
-    padding-top: 5%;
+    margin-top: -70px;
   }
   main .col-12 h2 {
     line-height: 1.5;
@@ -170,6 +175,7 @@ footer a {
   p {
     font-size: 20px;
   }
+
 }
 
 @media only screen and (min-width: 1800px) {
@@ -191,5 +197,8 @@ footer a {
   }
   p {
     font-size: 20px;
+  }
+  #firstBlurb {
+    padding-top: 170px;
   }
 }
