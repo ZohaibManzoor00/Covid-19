@@ -1,6 +1,29 @@
 main {
     padding-top: 35%;
   }
+
+  #myButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #confirmed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3px;
+    font-size: 20px;
+  }
+  
+  #deaths {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3px;
+    margin-bottom: -5%;
+    font-size: 20px;
+  }
   
   .box-1 {
     padding-top: 10%;
@@ -10,7 +33,6 @@ main {
     display: flex;
     flex-direction: row-reverse;
   }
-  
   
   .side {
     background-color: #ffffff;
@@ -80,7 +102,11 @@ main {
       line-height: 1.5;
     }
     h2 {
-      padding-top: 7px;
+      padding-top: 10px;
+    }
+    #myButton { 
+      padding-top: 11px;
+      padding-bottom: -30px;
     }
   }
   
@@ -111,6 +137,10 @@ main {
     }
     main .col-12 h2 {
       line-height: 1.2;
+    }
+    #myButton {
+      padding-top: 10px;
+      padding-bottom: 5px;
     }
   }
   
