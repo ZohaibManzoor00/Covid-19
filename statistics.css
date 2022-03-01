@@ -79,6 +79,9 @@ main {
     main .col-12 h2 {
       line-height: 1.5;
     }
+    h2 {
+      padding-top: 7px;
+    }
   }
   
   
