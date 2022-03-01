@@ -109,6 +109,7 @@ main {
     h2 {
       padding-top: 5px;
     }
+    
   }
   
   
@@ -140,7 +141,7 @@ main {
       line-height: 1.2;
     }
     #myButton {
-      padding-top: 5px;
+      padding-top: 10px;
       padding-bottom: 5px;
     }
   }
